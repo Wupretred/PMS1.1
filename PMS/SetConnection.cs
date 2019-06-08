@@ -28,7 +28,7 @@ namespace PMS
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                MessageBox.Show("数据库连接错误。");
+                MessageBox.Show("数据库连接错误");
             }
 
             return sqlConnection;

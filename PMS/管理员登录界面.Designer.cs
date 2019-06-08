@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(管理员登录界面));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,20 +43,21 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(266, 41);
+            this.label1.Location = new System.Drawing.Point(256, 46);
             this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(178, 42);
             this.label1.TabIndex = 1;
             this.label1.Text = "管理员登录";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(137, 132);
+            this.label2.Location = new System.Drawing.Point(127, 137);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 28);
             this.label2.TabIndex = 2;
@@ -64,8 +66,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(137, 201);
+            this.label3.Location = new System.Drawing.Point(127, 206);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 28);
             this.label3.TabIndex = 3;
@@ -74,24 +77,24 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(251, 126);
+            this.textBox1.Location = new System.Drawing.Point(241, 131);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(254, 35);
+            this.textBox1.Size = new System.Drawing.Size(225, 35);
             this.textBox1.TabIndex = 4;
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox2.Location = new System.Drawing.Point(251, 195);
+            this.textBox2.Location = new System.Drawing.Point(241, 200);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(254, 35);
+            this.textBox2.Size = new System.Drawing.Size(225, 35);
             this.textBox2.TabIndex = 5;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(99, 279);
+            this.button1.Location = new System.Drawing.Point(89, 284);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 38);
             this.button1.TabIndex = 6;
@@ -102,7 +105,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(295, 279);
+            this.button2.Location = new System.Drawing.Point(285, 284);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(124, 38);
             this.button2.TabIndex = 7;
@@ -113,7 +116,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(477, 279);
+            this.button3.Location = new System.Drawing.Point(467, 284);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(124, 38);
             this.button3.TabIndex = 8;
@@ -123,20 +126,23 @@
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button4.Location = new System.Drawing.Point(24, 20);
+            this.button4.ForeColor = System.Drawing.Color.DimGray;
+            this.button4.Location = new System.Drawing.Point(3, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(152, 35);
+            this.button4.Size = new System.Drawing.Size(122, 35);
             this.button4.TabIndex = 9;
             this.button4.Text = "转换登陆身份";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // 管理员登录界面
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 384);
+            this.BackgroundImage = global::PMS.Properties.Resources.timg;
+            this.ClientSize = new System.Drawing.Size(655, 394);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -147,11 +153,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(8);
             this.Name = "管理员登录界面";
-            this.Text = "XX公司工资管理系统";
+            this.Text = "管理员登录";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.管理员登录界面_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

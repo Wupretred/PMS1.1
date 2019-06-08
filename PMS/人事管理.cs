@@ -8,7 +8,7 @@ namespace PMS
 {
     public partial class 人事管理 : Form
     {
-        private List<People> list = null;
+        private List<List> list = null;
         SqlConnection sqlConnection = SetConnection.sqlConnection;
 
         public 人事管理()
@@ -24,15 +24,6 @@ namespace PMS
         }
 
         public object PMSDataSet { get; private set; }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
         private void Button3_Click(object sender, EventArgs e) //增加
         {
             try
@@ -47,16 +38,15 @@ namespace PMS
                         stringBuilder.Append(" , ");
                     }
                 }
-
                 stringBuilder.Append(")");
 
                 SqlCommand cmd = new SqlCommand(stringBuilder.ToString(), sqlConnection);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("成功添加。");
+                MessageBox.Show("成功添加");
             }
             catch
             {
-                MessageBox.Show("已有工号或姓名相同的信息，请更正。");
+                MessageBox.Show("请检查输入工号和姓名");
             }
         }
 
@@ -70,10 +60,6 @@ namespace PMS
         {
             GetData();
             new Query("select * from STAFF where ", list, stafftable).ExecuteQuery();
-        }
-
-        private void Stafftable_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
         }
 
         private void Button2_Click(object sender, EventArgs e) //修改
@@ -102,21 +88,27 @@ namespace PMS
                     SqlCommand cmd = new SqlCommand(stringBuilder.ToString(), sqlConnection);
                     if (cmd.ExecuteNonQuery() != 0)
                     {
+                        SqlCommand sqlCommand = new SqlCommand("select * from STAFF", sqlConnection);
+                        SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+                        BindingSource bindingSource = new BindingSource();
+                        bindingSource.DataSource = sqlDataReader;
+                        stafftable.DataSource = bindingSource;
+                        sqlDataReader.Close();
                         MessageBox.Show("修改成功！");
                     }
                     else
                     {
-                        MessageBox.Show("未找到数据。");
+                        MessageBox.Show("未找到数据");
                     }
                 }
             }
             catch
             {
-                MessageBox.Show("已有相同的信息，请更正。");
+                MessageBox.Show("已有相同的信息，请更正");
             }
         }
 
-        private void Button4_Click(object sender, EventArgs e) //删除(如何实现查询后删除)
+        private void Button4_Click(object sender, EventArgs e) //删除
         {
             try
             {
@@ -136,15 +128,16 @@ namespace PMS
         public void GetData()
         {
             list = null;
-            list = new List<People>();
-            list.Add(new People("Sno", textBox1.Text.Trim()));
-            list.Add(new People("Sname", textBox2.Text.Trim()));
-            list.Add(new People("Ssex", comboBox1.Text));
-            list.Add(new People("Sbirth", textBox3.Text.Trim()));
-            list.Add(new People("Deptno", comboBox2.Text));
-            list.Add(new People("Slevel", textBox4.Text.Trim()));
-            list.Add(new People("Stel", textBox5.Text.Trim()));
-            list.Add(new People("JoinTime", textBox6.Text.Trim()));
+            list = new List<List>();
+            list.Add(new List("Sno", textBox1.Text.Trim()));
+            list.Add(new List("Sname", textBox2.Text.Trim()));
+            list.Add(new List("Ssex", comboBox1.Text));
+            list.Add(new List("Sbirth", textBox3.Text.Trim()));
+            list.Add(new List("Deptno", comboBox2.Text));
+            list.Add(new List("Slevel", textBox4.Text.Trim()));
+            list.Add(new List("Stel", textBox6.Text.Trim()));
+            list.Add(new List("JoinTime", textBox5.Text.Trim()));
         }
+
     }
 }

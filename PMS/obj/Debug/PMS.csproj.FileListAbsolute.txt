@@ -55,3 +55,10 @@ E:\PMS\PMS\PMS\obj\Debug\PMS.csproj.GenerateResource.cache
 E:\PMS\PMS\PMS\obj\Debug\PMS.csproj.CoreCompileInputs.cache
 E:\PMS\PMS\PMS\obj\Debug\PMS.exe
 E:\PMS\PMS\PMS\obj\Debug\PMS.pdb
+E:\PMS\PMS\PMS\obj\Debug\PMS.帮助.resources
+E:\PMS\PMS\PMS\obj\Debug\PMS.代扣查询.resources
+E:\PMS\PMS\PMS\obj\Debug\PMS.出勤查询.resources
+E:\PMS\PMS\PMS\obj\Debug\PMS.同事查询.resources
+E:\PMS\PMS\PMS\obj\Debug\PMS.工资查询.resources
+E:\PMS\PMS\PMS\obj\Debug\PMS.员工说明.resources
+E:\PMS\PMS\PMS\obj\Debug\PMS.管理员说明.resources

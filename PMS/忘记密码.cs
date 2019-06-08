@@ -49,22 +49,19 @@ namespace PMS
             }
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)//返回
         {
             this.Hide();
             _form.Show();
+            _form.StartPosition = FormStartPosition.CenterScreen;
+            //设置窗体为居中与屏幕
         }
 
         private void 忘记密码_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dialog = MessageBox.Show("是否退出程序？", "退出程序", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (dialog == DialogResult.Yes)
-                Environment.Exit(0);
+                Environment.Exit(0);//退出所有线程
             else
             {
                 e.Cancel = true;

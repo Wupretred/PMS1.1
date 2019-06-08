@@ -26,7 +26,7 @@ namespace PMS
 
             if (sqlDataReader.HasRows)
             {
-                MessageBox.Show("登陆成功！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); //登录成功
+                MessageBox.Show("登录成功！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); //登录成功
                 员工查询 form2 = new 员工查询();
                 form2.Show();
                 this.Hide();
@@ -100,10 +100,6 @@ namespace PMS
             form.StartPosition = FormStartPosition.CenterScreen;
             form.Show();
             this.Hide();
-        }
-
-        private void 员工登录界面_Load(object sender, EventArgs e)
-        {
         }
 
         private void 员工登录界面_FormClosing(object sender, FormClosingEventArgs e)

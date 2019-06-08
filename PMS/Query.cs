@@ -10,17 +10,19 @@ namespace PMS
     public class Query
     {
         private string defaultString;
-        private List<People> list;
+        private List<List> list;
         private DataGridView dataGridView;
         private SqlConnection sqlConnection = SetConnection.sqlConnection;
         
         
-        public Query(string defaultString,List<People> list,DataGridView dataGridView)
+        public Query(string defaultString,List<List> list,DataGridView dataGridView)
         {
             this.list = list;
             this.defaultString = defaultString;
             this.dataGridView = dataGridView;
         }
+
+
 
         public void ExecuteQuery()
         {
@@ -28,7 +30,7 @@ namespace PMS
             StringBuilder stringBuilder = new StringBuilder(defaultString);
             for (int i = list.Count - 1; i >= 0; i--)
             {
-                if (list[i].attr == "")
+                if (list[i].attr == ""|| list[i].attr == " ")
                 {
                     list.Remove(list[i]);
                 }
@@ -36,7 +38,7 @@ namespace PMS
 
             if (list.Count == 0)
             {
-                string[] str = Regex.Split(defaultString, " ", RegexOptions.IgnoreCase);
+                string[] str = Regex.Split(defaultString, " ", RegexOptions.IgnoreCase);//正则表达式 切割字符串
                 SqlCommand sqlCommand = new SqlCommand("select * from "+str[3], sqlConnection);
                 sqlDataReader = sqlCommand.ExecuteReader();
                 if (sqlDataReader.HasRows)

@@ -8,7 +8,7 @@ namespace PMS
 {
     public partial class 行政管理 : Form
     {
-        private List<People> list;
+        private List<List> list;
         private SqlConnection sqlConnection = SetConnection.sqlConnection;
 
         public 行政管理()
@@ -18,13 +18,17 @@ namespace PMS
 
         private void 行政管理_Load(object sender, EventArgs e)
         {
+            // TODO: 这行代码将数据加载到表“pMSDataSet37.DEPARTMENT”中。您可以根据需要移动或删除它。
+            this.dEPARTMENTTableAdapter1.Fill(this.pMSDataSet37.DEPARTMENT);
+            // TODO: 这行代码将数据加载到表“pMSDataSet29.RATE”中。您可以根据需要移动或删除它。
+            this.rATETableAdapter1.Fill(this.pMSDataSet29.RATE);
             // TODO: 这行代码将数据加载到表“pMSDataSet10.RATE”中。您可以根据需要移动或删除它。
             //            this.rATETableAdapter.Fill(this.pMSDataSet10.RATE);
             //            // TODO: 这行代码将数据加载到表“pMSDataSet4.DEPARTMENT”中。您可以根据需要移动或删除它。
             //            this.dEPARTMENTTableAdapter.Fill(this.pMSDataSet4.DEPARTMENT);
         }
 
-        private void Button1_Click(object sender, EventArgs e) //查询
+        private void Button1_Click(object sender, EventArgs e) //部门查询
         {
             GetData();
             new Query("select * from DEPARTMENT where ", list, departmenttable).ExecuteQuery();
@@ -42,7 +46,7 @@ namespace PMS
                                    Dno + "'";
                 SqlCommand cmd = new SqlCommand(insertStr, sqlConnection);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("修改成功。");
+                MessageBox.Show("修改成功");
                 SqlCommand sqlCommand = new SqlCommand("select * from DEPARTMENT", sqlConnection);
                 SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
                 BindingSource bindingSource = new BindingSource();
@@ -73,7 +77,7 @@ namespace PMS
                                        "VALUES ('" + Dno + "','" + Dname + "','" + Dpop + "')";
                     SqlCommand cmd = new SqlCommand(insertStr, sqlConnection);
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("添加成功。");
+                    MessageBox.Show("添加成功");
                     SqlCommand sqlCommand = new SqlCommand("select * from DEPARTMENT", sqlConnection);
                     SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
                     BindingSource bindingSource = new BindingSource();
@@ -93,27 +97,27 @@ namespace PMS
             if (list != null)
                 list.Clear();
             else
-                list = new List<People>();
-            list.Add(new People("RATEID", textBox6.Text.Trim()));
-            list.Add(new People("INSURANCE", textBox5.Text.Trim()));
-            list.Add(new People("TAX", textBox4.Text));
-            list.Add(new People("MINpaytax", textBox7.Text.Trim()));
+                list = new List<List>();
+            list.Add(new List("RID", textBox6.Text.Trim()));
+            list.Add(new List("INSURANCE", textBox5.Text.Trim()));
+            list.Add(new List("TAX", textBox4.Text));
+            list.Add(new List("MINpaytax", textBox7.Text.Trim()));
             new Query("select * from RATE where ", list, dataGridView1).ExecuteQuery();
         }
 
         private void Button7_Click(object sender, EventArgs e) //修改
         {
-            String RATEID = textBox6.Text.Trim();
-            String INSURANCE = textBox5.Text.Trim();
-            String TAX = textBox4.Text.Trim();
+            String RID = textBox6.Text.Trim();
+            String INSURANCE = textBox4.Text.Trim();
+            String TAX = textBox5.Text.Trim();
             String MINpaytax = textBox7.Text.Trim();
             try
             {
                 string insertStr = "UPDATE RATE SET INSURANCE = '" + INSURANCE + "',TAX='" + TAX + "',MINpaytax='" +
-                                   MINpaytax + "' WHERE RATEID = '" + RATEID + "'";
+                                   MINpaytax + "' WHERE RID = '" + RID + "'";
                 SqlCommand cmd = new SqlCommand(insertStr, sqlConnection);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("修改成功。");
+                MessageBox.Show("修改成功");
                 SqlCommand sqlCommand = new SqlCommand("select * from RATE", sqlConnection);
                 SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
                 BindingSource bindingSource = new BindingSource();
@@ -129,20 +133,20 @@ namespace PMS
 
         private void Button4_Click(object sender, EventArgs e) //增加
         {
-            String RATEID = textBox6.Text.Trim();
+            String RID = textBox6.Text.Trim();
             String INSURANCE = textBox5.Text.Trim();
             String TAX = textBox4.Text.Trim();
             String MINpaytax = textBox7.Text.Trim();
             try
             {
-                if (RATEID == "" || INSURANCE == "" || TAX == "" || MINpaytax == "")
+                if (RID == "" || INSURANCE == "" || TAX == "" || MINpaytax == "")
                 {
                     MessageBox.Show("请将信息填写完整!", "警告");
                 }
                 else
                 {
-                    string insertStr = "INSERT INTO  RATE (RATEID,INSURANCE,TAX,MINpaytax)    " +
-                                       "VALUES ('" + RATEID + "','" + INSURANCE + "','" + TAX + "','" + MINpaytax +
+                    string insertStr = "INSERT INTO  RATE (RID,INSURANCE,TAX,MINpaytax)    " +
+                                       "VALUES ('" + RID + "','" + INSURANCE + "','" + TAX + "','" + MINpaytax +
                                        "')";
                     SqlCommand cmd = new SqlCommand(insertStr, sqlConnection);
                     cmd.ExecuteNonQuery();
@@ -184,10 +188,10 @@ namespace PMS
         public void GetData()
         {
             list = null;
-            list = new List<People>();
-            list.Add(new People("Dno", textBox1.Text.Trim()));
-            list.Add(new People("Dname", textBox2.Text.Trim()));
-            list.Add(new People("Dpop", textBox3.Text));
+            list = new List<List>();
+            list.Add(new List("Dno", textBox1.Text.Trim()));
+            list.Add(new List("Dname", textBox2.Text.Trim()));
+            list.Add(new List("Dpop", textBox3.Text));
         }
     }
 }

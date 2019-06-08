@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="People.cs" />
+    <Compile Include="List.cs" />
     <Compile Include="PMSDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -152,15 +152,90 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PMSDataSet28.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PMSDataSet29.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMSDataSet29.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PMSDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PMSDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PMSDataSet30.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMSDataSet30.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PMSDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMSDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PMSDataSet32.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMSDataSet32.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PMSDataSet33.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMSDataSet33.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PMSDataSet34.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMSDataSet34.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PMSDataSet35.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMSDataSet35.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PMSDataSet36.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMSDataSet36.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PMSDataSet37.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMSDataSet37.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PMSDataSet38.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMSDataSet38.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PMSDataSet39.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMSDataSet39.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PMSDataSet4.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PMSDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PMSDataSet40.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMSDataSet40.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PMSDataSet41.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMSDataSet41.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PMSDataSet42.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMSDataSet42.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PMSDataSet43.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PMSDataSet43.xsd</DependentUpon>
     </Compile>
     <Compile Include="PMSDataSet5.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -189,17 +264,47 @@
     </Compile>
     <Compile Include="Query.cs" />
     <Compile Include="SetConnection.cs" />
+    <Compile Include="代扣查询.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="代扣查询.Designer.cs">
+      <DependentUpon>代扣查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="出勤查询.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="出勤查询.Designer.cs">
+      <DependentUpon>出勤查询.cs</DependentUpon>
+    </Compile>
     <Compile Include="出勤管理.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="出勤管理.Designer.cs">
       <DependentUpon>出勤管理.cs</DependentUpon>
     </Compile>
+    <Compile Include="同事查询.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="同事查询.Designer.cs">
+      <DependentUpon>同事查询.cs</DependentUpon>
+    </Compile>
     <Compile Include="员工查询.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="员工查询.Designer.cs">
       <DependentUpon>员工查询.cs</DependentUpon>
+    </Compile>
+    <Compile Include="员工说明.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="员工说明.Designer.cs">
+      <DependentUpon>员工说明.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工资查询.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工资查询.Designer.cs">
+      <DependentUpon>工资查询.cs</DependentUpon>
     </Compile>
     <Compile Include="工资管理.cs">
       <SubType>Form</SubType>
@@ -250,6 +355,12 @@
     <Compile Include="工资管理系统.Designer.cs">
       <DependentUpon>工资管理系统.cs</DependentUpon>
     </Compile>
+    <Compile Include="管理员说明.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="管理员说明.Designer.cs">
+      <DependentUpon>管理员说明.cs</DependentUpon>
+    </Compile>
     <Compile Include="行政管理.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -265,14 +376,32 @@
     <EmbeddedResource Include="人事管理.resx">
       <DependentUpon>人事管理.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="代扣查询.resx">
+      <DependentUpon>代扣查询.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="出勤查询.resx">
+      <DependentUpon>出勤查询.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="出勤管理.resx">
       <DependentUpon>出勤管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="同事查询.resx">
+      <DependentUpon>同事查询.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="员工查询.resx">
       <DependentUpon>员工查询.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="员工说明.resx">
+      <DependentUpon>员工说明.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工资查询.resx">
+      <DependentUpon>工资查询.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="工资管理.resx">
       <DependentUpon>工资管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="帮助.resx">
+      <DependentUpon>帮助.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="忘记密码.resx">
       <DependentUpon>忘记密码.cs</DependentUpon>
@@ -291,9 +420,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="工资管理系统.resx">
       <DependentUpon>工资管理系统.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="管理员说明.resx">
+      <DependentUpon>管理员说明.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="行政管理.resx">
       <DependentUpon>行政管理.cs</DependentUpon>
@@ -543,6 +676,17 @@
     <None Include="PMSDataSet28.xss">
       <DependentUpon>PMSDataSet28.xsd</DependentUpon>
     </None>
+    <None Include="PMSDataSet29.xsc">
+      <DependentUpon>PMSDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet29.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PMSDataSet29.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMSDataSet29.xss">
+      <DependentUpon>PMSDataSet29.xsd</DependentUpon>
+    </None>
     <None Include="PMSDataSet3.xsc">
       <DependentUpon>PMSDataSet3.xsd</DependentUpon>
     </None>
@@ -554,6 +698,116 @@
     <None Include="PMSDataSet3.xss">
       <DependentUpon>PMSDataSet3.xsd</DependentUpon>
     </None>
+    <None Include="PMSDataSet30.xsc">
+      <DependentUpon>PMSDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet30.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PMSDataSet30.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMSDataSet30.xss">
+      <DependentUpon>PMSDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet31.xsc">
+      <DependentUpon>PMSDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PMSDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMSDataSet31.xss">
+      <DependentUpon>PMSDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet32.xsc">
+      <DependentUpon>PMSDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet32.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PMSDataSet32.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMSDataSet32.xss">
+      <DependentUpon>PMSDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet33.xsc">
+      <DependentUpon>PMSDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet33.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PMSDataSet33.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMSDataSet33.xss">
+      <DependentUpon>PMSDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet34.xsc">
+      <DependentUpon>PMSDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet34.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PMSDataSet34.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMSDataSet34.xss">
+      <DependentUpon>PMSDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet35.xsc">
+      <DependentUpon>PMSDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet35.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PMSDataSet35.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMSDataSet35.xss">
+      <DependentUpon>PMSDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet36.xsc">
+      <DependentUpon>PMSDataSet36.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet36.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PMSDataSet36.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMSDataSet36.xss">
+      <DependentUpon>PMSDataSet36.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet37.xsc">
+      <DependentUpon>PMSDataSet37.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet37.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PMSDataSet37.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMSDataSet37.xss">
+      <DependentUpon>PMSDataSet37.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet38.xsc">
+      <DependentUpon>PMSDataSet38.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet38.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PMSDataSet38.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMSDataSet38.xss">
+      <DependentUpon>PMSDataSet38.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet39.xsc">
+      <DependentUpon>PMSDataSet39.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet39.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PMSDataSet39.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMSDataSet39.xss">
+      <DependentUpon>PMSDataSet39.xsd</DependentUpon>
+    </None>
     <None Include="PMSDataSet4.xsc">
       <DependentUpon>PMSDataSet4.xsd</DependentUpon>
     </None>
@@ -564,6 +818,50 @@
     </None>
     <None Include="PMSDataSet4.xss">
       <DependentUpon>PMSDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet40.xsc">
+      <DependentUpon>PMSDataSet40.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet40.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PMSDataSet40.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMSDataSet40.xss">
+      <DependentUpon>PMSDataSet40.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet41.xsc">
+      <DependentUpon>PMSDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet41.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PMSDataSet41.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMSDataSet41.xss">
+      <DependentUpon>PMSDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet42.xsc">
+      <DependentUpon>PMSDataSet42.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet42.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PMSDataSet42.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMSDataSet42.xss">
+      <DependentUpon>PMSDataSet42.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet43.xsc">
+      <DependentUpon>PMSDataSet43.xsd</DependentUpon>
+    </None>
+    <None Include="PMSDataSet43.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PMSDataSet43.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PMSDataSet43.xss">
+      <DependentUpon>PMSDataSet43.xsd</DependentUpon>
     </None>
     <None Include="PMSDataSet5.xsc">
       <DependentUpon>PMSDataSet5.xsd</DependentUpon>
@@ -632,6 +930,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timg.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

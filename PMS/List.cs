@@ -1,8 +1,8 @@
 namespace PMS
 {
-    public class People
+    public class List
     {
-        public People(string name, string attr)
+        public List(string name, string attr)
         {
             this.name = name;
             this.attr = attr;

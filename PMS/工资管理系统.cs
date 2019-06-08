@@ -7,10 +7,10 @@ namespace PMS
     {
         private 行政管理 _formAdminManage;
         private 出勤管理 _formDutyManage;
-        private 忘记密码 _formForgetPasswd;
         private 人事管理 _formPersonalManage;
-        private Form[] _forms = new Form[4];
         private 工资管理 _formSalaryManage;
+        private 帮助 _formhelp;
+        private Form[] _forms = new Form[5];//将5个界面放在数组里
 
         public 工资管理系统()
         {
@@ -28,14 +28,6 @@ namespace PMS
             _formPersonalManage.Show();
         }
 
-
-        private void 修改密码ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ShowAndHide(_formForgetPasswd);
-            _formForgetPasswd.MdiParent = this;
-            _formForgetPasswd.StartPosition = FormStartPosition.CenterScreen;
-            _formForgetPasswd.Show();
-        }
 
         private void 人事管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -62,10 +54,6 @@ namespace PMS
             _formSalaryManage.Show();
         }
 
-        private void 工资管理系统_Load(object sender, EventArgs e)
-        {
-        }
-
         private void 退出系统ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -78,26 +66,24 @@ namespace PMS
             form.StartPosition = FormStartPosition.CenterScreen;
             form.Show();
         }
-
-        private void TabPage2_Click(object sender, EventArgs e)
+        private void 修改密码ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-        }
-
-        private void TabPage1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void 帮助ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            帮助 form = new 帮助();
-            form.MdiParent = this;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.TopLevel = false;
-            form.ControlBox = false;
-            form.Dock = DockStyle.Fill;
-            form.MdiParent = this;
+            this.Hide();
+            忘记密码 form = new 忘记密码(this);
             form.StartPosition = FormStartPosition.CenterScreen;
             form.Show();
+        }
+        private void 帮助ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowAndHide(_formhelp);
+            _formhelp.MdiParent = this;
+            _formhelp.FormBorderStyle = FormBorderStyle.None;
+            _formhelp.TopLevel = false;
+            _formhelp.ControlBox = false;
+            _formhelp.Dock = DockStyle.Fill;
+            _formhelp.MdiParent = this;
+            _formhelp.StartPosition = FormStartPosition.CenterScreen;
+            _formhelp.Show();
         }
 
         private void 行政管理ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -136,9 +122,11 @@ namespace PMS
             _forms[2] = _formAdminManage;
             _formDutyManage = new 出勤管理();
             _forms[3] = _formDutyManage;
+            _formhelp = new 帮助();
+            _forms[4] = _formhelp;
         }
 
-        private void ShowAndHide(Form form)
+        private void ShowAndHide(Form form)//总写隐藏和显示方法
         {
             foreach (Form f in _forms)
             {
@@ -161,5 +149,7 @@ namespace PMS
                 e.Cancel = true;
             }
         }
+
+
     }
 }

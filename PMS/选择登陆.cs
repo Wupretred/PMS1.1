@@ -13,18 +13,20 @@ namespace PMS
             this.MaximizeBox = false;
         }
 
-        private void Button1_Click(object sender, EventArgs e) //管理员
+        private void Button1_Click(object sender, EventArgs e) //管理员登录
         {
             管理员登录界面 form = new 管理员登录界面();
             form.StartPosition = FormStartPosition.CenterScreen;
+            //设置窗体为居中与屏幕
             form.Show();
             this.Hide();
         }
 
-        private void Button2_Click(object sender, EventArgs e) //员工
+        private void Button2_Click(object sender, EventArgs e) //员工登录
         {
             员工登录界面 form = new 员工登录界面();
             form.StartPosition = FormStartPosition.CenterScreen;
+            //设置窗体为居中与屏幕
             form.Show();
             this.Hide();
         }

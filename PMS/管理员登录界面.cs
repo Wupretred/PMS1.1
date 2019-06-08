@@ -14,18 +14,6 @@ namespace PMS
             this.MaximizeBox = false;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void MenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-        }
-
         private void Button1_Click(object sender, EventArgs e) //登录
         {
             string name = textBox1.Text.Trim();
@@ -39,7 +27,7 @@ namespace PMS
 
             if (sqlDataReader.HasRows)
             {
-                MessageBox.Show("登陆成功！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); //登录成功
+                MessageBox.Show("登录成功！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); //登录成功
                 工资管理系统 form2 = new 工资管理系统();
                 sqlDataReader.Close();
 
@@ -63,7 +51,6 @@ namespace PMS
                 MessageBox.Show("数据库关闭错误！", "登陆提示");
             }
         }
-
 
         private void Button2_Click(object sender, EventArgs e) //注册
         {

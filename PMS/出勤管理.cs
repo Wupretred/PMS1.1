@@ -8,7 +8,7 @@ namespace PMS
 {
     public partial class 出勤管理 : Form
     {
-        private List<People> list;
+        private List<List> list;
         private SqlConnection sqlConnection = SetConnection.sqlConnection;
 
         public 出勤管理()
@@ -27,27 +27,32 @@ namespace PMS
 
         private void 出勤管理_Load(object sender, EventArgs e)
         {
+            // TODO: 这行代码将数据加载到表“pMSDataSet31.ATTENDENCE”中。您可以根据需要移动或删除它。
+            this.aTTENDENCETableAdapter3.Fill(this.pMSDataSet31.ATTENDENCE);
+            // TODO: 这行代码将数据加载到表“pMSDataSet30.ATTENDENCE”中。您可以根据需要移动或删除它。
+            this.aTTENDENCETableAdapter2.Fill(this.pMSDataSet30.ATTENDENCE);
             // TODO: 这行代码将数据加载到表“pMSDataSet6.ATTENDENCE”中。您可以根据需要移动或删除它。
-//            this.aTTENDENCETableAdapter1.Fill(this.pMSDataSet6.ATTENDENCE);
+            //            this.aTTENDENCETableAdapter1.Fill(this.pMSDataSet6.ATTENDENCE);
         }
 
         private void Button1_Click(object sender, EventArgs e) //写入
         {
-            String Sno = textBox3.Text.Trim();
-            String Overtime = textBox1.Text.Trim();
-            String Absence = textBox2.Text.Trim();
-            String Atime = textBox4.Text.Trim();
+            String AID = t1.Text.Trim();
+            String Sno = t2.Text.Trim();
+            String Overtime = t3.Text.Trim();
+            String Absence = t4.Text.Trim();
+            String Atime = t5.Text.Trim();
 
             try
             {
-                if (Sno == "" || Overtime == "" || Absence == "" || Atime == "")
+                if (AID==""||Sno == "" || Overtime == "" || Absence == "" || Atime == "")
                 {
                     MessageBox.Show("请将信息填写完整!", "警告");
                 }
                 else
                 {
-                    string insertStr = "INSERT INTO  ATTENDENCE (Sno,OVERTIME,ABSENCE,ATIME) " +
-                                       "VALUES ('" + Sno + "','" + Overtime + "','" + Absence + "','" + Atime + "')";
+                    string insertStr = "INSERT INTO  ATTENDENCE (AID,Sno,OVERTIME,ABSENCE,ATIME) " +
+                                       "VALUES ('" +AID+"','"+ Sno + "','" + Overtime + "','" + Absence + "','" + Atime + "')";
                     SqlCommand cmd = new SqlCommand(insertStr, sqlConnection);
                     cmd.ExecuteNonQuery();
                     SqlCommand sqlCommand = new SqlCommand("select * from ATTENDENCE", sqlConnection);
@@ -72,29 +77,14 @@ namespace PMS
         {
             try
             {
-                //问题 删除了所有工号相同的  怎么实现选中哪行删哪行
-                string select_id = stafftable.SelectedRows[0].Cells[0].Value.ToString(); //选择的当前行第一列的值
-                string select_overtime = stafftable.SelectedRows[0].Cells[1].Value.ToString(); //选择的当前行第一列的值
-                string select_absence = stafftable.SelectedRows[0].Cells[2].Value.ToString(); //选择的当前行第一列的值
-                string select_atime = stafftable.SelectedRows[0].Cells[3].Value.ToString(); //选择的当前行第一列的值
-
-                string delete_by_id = "delete from ATTENDENCE where Sno=" + "'" + select_id + "'"
-                                      + " and OVERTIME=" + select_overtime + " and ABSENCE=" + select_absence +
-                                      " and ATIME=" + select_atime; //sql删除语句
-                SqlCommand cmd = new SqlCommand(delete_by_id, sqlConnection);
+                string select_aid = stafftable.SelectedRows[0].Cells[0].Value.ToString(); //选择的当前行第一列的值，也就是ID
+                string delete_by_aid = "delete from ATTENDENCE where AID=" + select_aid; //sql删除语句
+                SqlCommand cmd = new SqlCommand(delete_by_aid, sqlConnection);
                 cmd.ExecuteNonQuery();
-
-                SqlCommand sqlCommand = new SqlCommand("select * from ATTENDENCE", sqlConnection);
-                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-                BindingSource bindingSource = new BindingSource();
-                bindingSource.DataSource = sqlDataReader;
-                stafftable.DataSource = bindingSource;
-                sqlDataReader.Close();
             }
             catch
             {
                 MessageBox.Show("请正确选择行!");
-                throw;
             }
         }
 
@@ -107,11 +97,17 @@ namespace PMS
         public void GetData()
         {
             list = null;
-            list = new List<People>();
-            list.Add(new People("Sno", textBox3.Text.Trim()));
-            list.Add(new People("OVERTIME", textBox1.Text.Trim()));
-            list.Add(new People("ABSENCE", textBox2.Text.Trim()));
-            list.Add(new People("ATIME", textBox4.Text.Trim()));
+            list = new List<List>();
+            list.Add(new List("AID", t1.Text.Trim()));
+            list.Add(new List("Sno", t2.Text.Trim()));
+            list.Add(new List("OVERTIME", t3.Text.Trim()));
+            list.Add(new List("ABSENCE", t4.Text.Trim()));
+            list.Add(new List("ATIME", t5.Text.Trim()));
+        }
+
+        private void TextBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
